@@ -92,6 +92,24 @@ def dict_hex():
   return hexa
 
 
+def freqAl(text):
+    """
+    alphas.freqAl(text) -> dict
+
+    Returns a dictionary with alphabets as keys and their occurrence in the text 
+    as the value.
+    """
+    text = text.lower()
+    extra = '1234567890~`!@#$%^&*()-=_+|}{[]:\";\'\\<>,.?/'
+    for i in extra:
+        text = text.replace(i, '')
+    freq = dicAlph(0)
+    for i in text:
+        freq[i] += 1
+
+    return freq
+
+
 # if __name__ == '__main__':
 #   print loweralph()
 #   print upperalph()
