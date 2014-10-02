@@ -1,7 +1,7 @@
 import string
 
 
-def alph(start=0, end=-1):
+def alph(start=0, end=26):
     """
     alphas.alph([start, [end]]) -> str
 
@@ -11,7 +11,7 @@ def alph(start=0, end=-1):
     return string.ascii_lowercase[start:end]
 
 
-def ualph(start=0, end=-1):
+def ualph(start=0, end=26):
     """
     alphas.ualph([start, [end]]) -> str
 
@@ -21,7 +21,7 @@ def ualph(start=0, end=-1):
     return string.ascii_uppercase[start:end]
 
 
-def alphlist(start=0, end=-1):
+def alphlist(start=0, end=26):
     """
     alphas.alphlist([start, [end]]) -> list
 
@@ -31,7 +31,7 @@ def alphlist(start=0, end=-1):
     return list(alph(start, end))
 
 
-def ualphlist(start=0, end=-1):
+def ualphlist(start=0, end=26):
     """
     alphas.uAlphlist([start, [end]]) -> list
 
@@ -41,7 +41,7 @@ def ualphlist(start=0, end=-1):
     return list(uAlph(start, end))
 
 
-def dicalph(value='', start=0, end=-1):
+def dicalph(value='', start=0, end=26):
     """
     alphas.dicAlph([value, [start, [end]]]) -> dict
 
@@ -56,7 +56,7 @@ def dicalph(value='', start=0, end=-1):
     return d
 
 
-def udicalph(value='', start=0, end=-1):
+def udicalph(value='', start=0, end=26):
     """
     alphas.dicAlph([value, [start, [end]]]) -> dict
 
@@ -92,18 +92,18 @@ def dict_hex():
   return hexa
 
 
-def freqAl(text):
+def freqal(text):
     """
-    alphas.freqAl(text) -> dict
+    alphas.freqal(text) -> dict
 
     Returns a dictionary with alphabets as keys and their occurrence in the text 
     as the value.
     """
     text = text.lower()
-    extra = '1234567890~`!@#$%^&*()-=_+|}{[]:\";\'\\<>,.?/'
+    extra = '1234567890~`!@#$%^&*()-=_+|}{[]:\";\'\\<>,.?/ '
     for i in extra:
         text = text.replace(i, '')
-    freq = dicAlph(0)
+    freq = dicalph(0)
     for i in text:
         freq[i] += 1
 
