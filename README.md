@@ -1,4 +1,16 @@
 Alphas
 ======
 
-Play with alphabets
+Play with alphabets.
+
+This module is for fun. It will try to do straight forward things which can be done with the alphabets. An exhaustive list is given as follows,
+
+1. A string of lowercase letters
+2. A string of uppercase letters
+3. A python list of lowercase letters
+4. A python list of uppercase letters
+5. A python dictionary of lowercase letters
+6. A python dictionary of uppercase letters
+7. Frequency analysis of a given text
+
+more to come...
