@@ -1,4 +1,5 @@
 import string
+from itertools import permutations
 
 
 def alph(start=0, end=26):
@@ -202,7 +203,29 @@ def urotalpha(value=13, start=0, end=26):
         start += 1  
     return d
   
+
+def permalpha(start=0, end=20):
+    """
+    alphas.permalpha([start, [end]]) -> list
     
+    Returns a list of permutations of alphabets (lowercase) from start 
+    till end.By default the start is 0 and end is 26.
+    """
+    perms = [''.join(p) for p in permutations(alph(start,end))]
+    return perms
+    
+    
+def upermalpha(start=0, end=20):
+    """
+    alphas.upermalpha([start, [end]]) -> list
+    
+    Returns a list of permutations of alphabets (uppercase) from start 
+    till end.By default the start is 0 and end is 26.
+    """
+    perms = [''.join(p) for p in permutations(ualph(start,end))]
+    return perms
+    
+        
 #if __name__ == '__main__':
 #   print alph()
 #   print ualph()
@@ -212,4 +235,4 @@ def urotalpha(value=13, start=0, end=26):
 #   print dict_oct()
 #   print dict_hex()
 #   print rotalpha()
-
+#   print upermalpha(0,4)    
