@@ -225,6 +225,56 @@ def upermalpha(start=0, end=20):
     perms = [''.join(p) for p in permutations(ualph(start,end))]
     return perms
     
+
+def lexicographically_next_perm(a):
+    """
+    alphas.lexicographically_next_perm(a) -> boolean
+    Generates the lexicographically next permutation.
+     
+    Input: a permutation, called "a". This method modifies
+    "a" in place. Returns True if we could generate a next
+    permutation. Returns False if it was the last permutation
+    lexicographically.
+    """
+    i = len(a) - 2
+    while not (i < 0 or a[i] < a[i+1]):
+        i -= 1
+    if i < 0:
+        return False
+    # else
+    j = len(a) - 1
+    while not (a[j] > a[i]):
+        j -= 1
+    a[i], a[j] = a[j], a[i]        # swap
+    a[i+1:] = reversed(a[i+1:])    # reverse elements from position i+1 till the end of the sequence
+    return True
+    
+
+def lex(start=0, end=20):
+    '''
+    alphas.lex([start, [end]]) -> prints list
+     
+    Generates all the lexicographically next permutations of alphabets (lowercase)
+    from start till end.By default the start is 0 and end is 26.
+    '''
+    li = alphlist(start, end)
+    print li   
+    while lexicographically_next_perm(li):
+        print li 
+           
+           
+def ulex(start=0, end=20):
+    '''
+    alphas.ulex([start, [end]]) -> prints list 
+    
+    Generates all the lexicographically next permutations of alphabets (uppercase)
+    from start till end.By default the start is 0 and end is 26.
+    '''
+    li = ualphlist(start, end)
+    print li   
+    while lexicographically_next_perm(li):
+        print li           
+ 
         
 #if __name__ == '__main__':
 #   print alph()
@@ -235,4 +285,5 @@ def upermalpha(start=0, end=20):
 #   print dict_oct()
 #   print dict_hex()
 #   print rotalpha()
-#   print upermalpha(0,4)    
+#   print upermalpha(0,4)
+#   ulex(2,7)         
