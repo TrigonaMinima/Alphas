@@ -167,6 +167,42 @@ def freqal(text):
     return freq
     
     
+def rotalpha(value=13, start=0, end=26):
+    """
+    alphas.rotalpha([value, [start, [end]]]) -> dict
+
+    Returns a dictionary of alphabets (key is lowercase alphabet and value is 
+    alphabet obtained after rotation) from start till end.Value is by default
+    13, but can be anything.By default the start is 0 and end is 26.
+    """
+    d = {}
+    for a in alphlist(start, end):
+        if (value + start < 26):
+          d[a] = alph(start+value,start+value+1)
+        else :
+          d[a] = alph(start+value-26,start+value-26+1)   
+        start += 1  
+    return d
+    
+
+def urotalpha(value=13, start=0, end=26):
+    """
+    alphas.urotalpha([value, [start, [end]]]) -> dict
+
+    Returns a dictionary of alphabets (key is uppercase alphabet and value is 
+    alphabet obtained after rotation) from start till end.Value is by default
+    13, but can be anything.By default the start is 0 and end is 26.
+    """
+    d = {}
+    for a in ualphlist(start, end):
+        if (value + start < 26):
+          d[a] = ualph(start+value,start+value+1)
+        else :
+          d[a] = ualph(start+value-26,start+value-26+1)    
+        start += 1  
+    return d
+  
+    
 #if __name__ == '__main__':
 #   print alph()
 #   print ualph()
@@ -175,4 +211,5 @@ def freqal(text):
 #   print dict_bi()
 #   print dict_oct()
 #   print dict_hex()
+#   print rotalpha()
 
