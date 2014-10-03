@@ -73,7 +73,7 @@ def udicalph(value='', start=0, end=26):
 
 def dict_bi(start=0,end=26):
     """
-    alphas.dict_bi([value, [start, [end]]]) -> dict
+    alphas.dict_bi([start, [end]]) -> dict
 
     Returns a dictionary of alphabets (key is lowercase alphabet) and their ascii
     codes in binary as the value.
@@ -86,7 +86,7 @@ def dict_bi(start=0,end=26):
 
 def udict_bi(start=0,end=26):
     """
-    alphas.udict_bi([value, [start, [end]]]) -> dict
+    alphas.udict_bi([start, [end]]) -> dict
 
     Returns a dictionary of alphabets (key is uppercase alphabet) and their ascii
     codes in binary as the value.
@@ -99,7 +99,7 @@ def udict_bi(start=0,end=26):
 
 def dict_oct(start=0,end=26):
     """
-    alphas.dict_oct([value, [start, [end]]]) -> dict
+    alphas.dict_oct([start, [end]]) -> dict
 
     Returns a dictionary of alphabets (key is lowercase alphabet) and their ascii
     codes in octal as the value.
@@ -112,7 +112,7 @@ def dict_oct(start=0,end=26):
 
 def udict_oct(start=0,end=26):
     """
-    alphas.dict_oct([value, [start, [end]]]) -> dict
+    alphas.udict_oct([start, [end]]) -> dict
 
     Returns a dictionary of alphabets (key is uppercase alphabet) and their ascii
     codes in octal as the value.
@@ -125,7 +125,7 @@ def udict_oct(start=0,end=26):
 
 def dict_hex(start=0,end=26):
     """
-    alphas.dict_oct([value, [start, [end]]]) -> dict
+    alphas.dict_hex([start, [end]]) -> dict
 
     Returns a dictionary of alphabets (key is lowercase alphabet) and their ascii
     codes in hexadecimal as the value.
@@ -138,7 +138,7 @@ def dict_hex(start=0,end=26):
 
 def udict_hex(start=0,end=26):
     """
-    alphas.dict_oct([value, [start, [end]]]) -> dict
+    alphas.udict_hex([start, [end]]) -> dict
 
     Returns a dictionary of alphabets (key is uppercase alphabet) and their ascii
     codes in hexadecimal as the value.
