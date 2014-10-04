@@ -99,7 +99,7 @@ def uascii(start=0, end=26):
 
 
 # check #
-def permalpha(start=0, end=20):
+def permalpha(start=0, end=26):
     """
     core.permalpha([start, [end]]) -> list
 
@@ -110,7 +110,7 @@ def permalpha(start=0, end=20):
     return perms
 
 
-def upermalpha(start=0, end=20):
+def upermalpha(start=0, end=26):
     """
     core.upermalpha([start, [end]]) -> list
 
@@ -146,7 +146,7 @@ def lexicographically_next_perm(a):
     return True
 
 
-def lex(start=0, end=20):
+def lex(start=0, end=26):
     '''
     core.lex([start, [end]]) -> prints list
 
@@ -159,7 +159,7 @@ def lex(start=0, end=20):
         print(li)
 
 
-def ulex(start=0, end=20):
+def ulex(start=0, end=26):
     '''
     core.ulex([start, [end]]) -> prints list
 
@@ -172,10 +172,62 @@ def ulex(start=0, end=20):
         print(li)
 
 
+def vowel(start=0, end=26):
+    """
+    core.vowel([start, [end]]) -> int
+    
+    Returns no. of vowels in the string of alphabets in lowercase from start till end.
+    By default the start is 0 and end is 26.
+    """
+    vow = ['a','e','i','o','u']
+    vowels = 0
+    for a in alphlist(start,end):
+        if a in vow:
+            vowels += 1
+    return vowels
+
+
+def uvowel(start=0, end=26):
+    """
+    core.uvowel([start, [end]]) -> int
+    
+    Returns no. of vowels in the string of alphabets in uppercase from start till end.
+    By default the start is 0 and end is 26.
+    """
+    vow = ['A','E','I','O','U']
+    vowels = 0
+    for a in ualphlist(start,end):
+        if a in vow:
+            vowels += 1
+    return vowels
+
+
+def consonants(start=0, end=26):
+    """
+    core.consonants([start, [end]]) -> int
+    
+    Returns no. of consonants in the string of alphabets in lowercase from start till end.
+    By default the start is 0 and end is 26.
+    """
+    vowels = vowel(start,end)
+    return start + end - vowels
+
+
+def uconsonants(start=0, end=26):
+    """
+    core.uconsonants([start, [end]]) -> int
+    
+    Returns no. of consonants in the string of alphabets in uppercase from start till end.
+    By default the start is 0 and end is 26.
+    """
+    vowels = uvowel(start,end)
+    return start + end - vowels
+
+
 #if __name__ == '__main__':
 #   print alph()
 #   print ualph()
-#   print alphlist()
+#   print alphlist(0,4)
 #   print dic()
 #   print bi()
 #   print oct()
@@ -183,3 +235,4 @@ def ulex(start=0, end=20):
 #   print rotalpha()
 #   print upermalpha(0,4)
 #   ulex(2,7)
+#print uconsonants(0,4)
