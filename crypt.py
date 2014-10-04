@@ -1,6 +1,8 @@
+from core import *
+
 def freqal(text):
     """
-    alphas.freqal(text) -> dict
+    crypt.freqal(text) -> dict
 
     Returns a dictionary with alphabets as keys and their occurrence in the text
     as the value.
@@ -18,7 +20,7 @@ def freqal(text):
 
 def rot(rotv=13, start=0, end=26):
     """
-    alphas.rot([rotv, [start, [end]]]) -> dict
+    crypt.rot([rotv, [start, [end]]]) -> dict
 
     Returns a dictionary of alphabets (key is lowercase alphabet and value is
     rotated alphabet) from start till end. Rot value is by default 13, but can
@@ -26,17 +28,17 @@ def rot(rotv=13, start=0, end=26):
     """
     d = {}
     for a in alphlist(start, end):
-        if (value + start < 26):
-          d[a] = alph(start+value,start+value+1)
+        if (rotv + start < 26):
+          d[a] = alph(start+rotv,start+rotv+1)
         else :
-          d[a] = alph(start+value-26,start+value-26+1)
+          d[a] = alph(start+rotv-26,start+rotv-26+1)
         start += 1
     return d
 
 
 def urot(rotv=13, start=0, end=26):
     """
-    alphas.urot([rotv, [start, [end]]]) -> dict
+    crypt.urot([rotv, [start, [end]]]) -> dict
 
     Returns a dictionary of alphabets (key is uppercase alphabet and value is
     rotated alphabet) from start till end. Rot value is by default 13, but can
@@ -44,9 +46,9 @@ def urot(rotv=13, start=0, end=26):
     """
     d = {}
     for a in ualphlist(start, end):
-        if (value + start < 26):
-          d[a] = ualph(start+value,start+value+1)
+        if (rotv + start < 26):
+          d[a] = ualph(start+rotv,start+rotv+1)
         else :
-          d[a] = ualph(start+value-26,start+value-26+1)
+          d[a] = ualph(start+rotv-26,start+rotv-26+1)
         start += 1
-    return d
+    return d   

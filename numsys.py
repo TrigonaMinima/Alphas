@@ -1,15 +1,17 @@
+from core import *
+
 def binary(char):
     """
-    alphas.bi(char) -> int
+    numsys.binary(char) -> int
 
     Returns binary value of any alphabet.
-    """
-    return "{0:b}".format(ord(a))
+    """    
+    return "{0:b}".format(ord(char))
 
 
 def bi(start=0,end=26):
     """
-    alphas.bi([start, [end]]) -> dict
+    numsys.bi([start, [end]]) -> dict
 
     Returns a dictionary of alphabets (key is lowercase alphabet) and their ascii
     codes in binary as the value.
@@ -22,7 +24,7 @@ def bi(start=0,end=26):
 
 def ubi(start=0,end=26):
     """
-    alphas.ubi([start, [end]]) -> dict
+    numsys.ubi([start, [end]]) -> dict
 
     Returns a dictionary of alphabets (key is uppercase alphabet) and their ascii
     codes in binary as the value.
@@ -35,16 +37,16 @@ def ubi(start=0,end=26):
 
 def octal(char):
     """
-    alphas.octal(char) -> int
+    numsys.octal(char) -> int
 
-    Returns binary value of any alphabet.
+    Returns octal value of any alphabet.
     """
-    return "{0:o}".format(ord(a))
+    return "{0:o}".format(ord(char))
 
 
 def oct(start=0,end=26):
     """
-    alphas.oct([start, [end]]) -> dict
+    numsys.oct([start, [end]]) -> dict
 
     Returns a dictionary of alphabets (key is lowercase alphabet) and their ascii
     codes in octal as the value.
@@ -57,7 +59,7 @@ def oct(start=0,end=26):
 
 def uoct(start=0,end=26):
     """
-    alphas.uoct([start, [end]]) -> dict
+    numsys.uoct([start, [end]]) -> dict
 
     Returns a dictionary of alphabets (key is uppercase alphabet) and their ascii
     codes in octal as the value.
@@ -70,16 +72,16 @@ def uoct(start=0,end=26):
 
 def hexadecimal(char):
     """
-    alphas.hexa(char) -> int
+    numsys.hexa(char) -> int
 
-    Returns binary value of any alphabet.
+    Returns hexadecimal value of any alphabet.
     """
-    return "{0:x}".format(ord(a))
+    return "{0:x}".format(ord(char))
 
 
 def hex(start=0,end=26):
     """
-    alphas.hex([start, [end]]) -> dict
+    numsys.hex([start, [end]]) -> dict
 
     Returns a dictionary of alphabets (key is lowercase alphabet) and their ascii
     codes in hexadecimal as the value.
@@ -92,7 +94,7 @@ def hex(start=0,end=26):
 
 def uhex(start=0,end=26):
     """
-    alphas.uhex([start, [end]]) -> dict
+    numsys.uhex([start, [end]]) -> dict
 
     Returns a dictionary of alphabets (key is uppercase alphabet) and their ascii
     codes in hexadecimal as the value.
