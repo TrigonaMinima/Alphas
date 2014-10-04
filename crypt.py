@@ -1,4 +1,5 @@
 from core import *
+from loremipsum import *
 
 def freqal(text):
     """
@@ -52,6 +53,8 @@ def urot(rotv=13, start=0, end=26):
           d[a] = ualph(start+rotv-26,start+rotv-26+1)
         start += 1
     return d   
+
+
 def braille(start=0, end=26):
     """
     crypt.braille([start, [end]]) -> dict
@@ -166,3 +169,11 @@ def braille(start=0, end=26):
     for i in d:
         d[i] = letters[i]  
     return d
+
+
+def lipsum():
+    """
+    Returns string lorem ipsum
+    """
+    lipsum = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    return lipsum
