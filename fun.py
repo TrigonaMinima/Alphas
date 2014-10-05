@@ -322,3 +322,109 @@ def lovesong():
     for line in lyrics:
         print(line)
         time.sleep(2)
+
+
+def country(char):
+    """
+    fun.country(char) -> list
+
+    input is a single alphabet.
+
+    Returns a list of country names starting from alphabet char.
+    """
+    if not char.isalpha() or len(char) != 1:
+        raise Exception("Not a valid input!! Give in a single character.")
+
+    countries = {
+            'a' : ['Abkhazia', 'Afghanistan',
+                    'Akrotiri and Dhekelia(United Kingdom)', 'Albania', 'Algeria',
+                    'American Samoa(United States)','Andorra', 'Angola',
+                    'Anguilla(United Kingdom)', 'Antarctica', 'Antigua and Barbuda',
+                    'Argentina', 'Armenia', 'Aruba(Netherlands)',
+                    'Ashmore and Cartier Islands(Australia)', 'Australia',
+                    'Austria', 'Azerbaijan'],
+            'b' : ['Bahamas','Bahrain', 'Bangladesh', 'Barbados', 'Belarus',
+                    'Belgium', 'Belize', 'Benin', 'Bermuda(United Kingdom)',
+                    'Bhutan', 'Bolivia', 'Bosnia and Herzegovina', 'Botswana',
+                    'Bouvet Island(Norway)', 'Brazil',
+                    'British Indian Ocean Territory(United Kingdom)',
+                    'British Virgin Islands(United Kingdom)', 'Brunei', 'Bulgaria',
+                    'Burkina Faso', 'Burundi'],
+            'c' : ['Cambodia', 'Cameroon', 'CanadaChina', 'Cape Verde',
+                    'Cayman Islands(United Kingdom)', 'Central African Republic',
+                    'Chad', 'Chile', 'Christmas Island(Australia)',
+                    'Clipperton Island(France)', 'Cocos (Keeling) Islands(Australia)',
+                    'Colombia', 'Comoros', 'Cook Islands(New Zealand)',
+                    'Coral Sea Islands(Australia)', 'Costa Rica', 'Cote d Ivoire',
+                    'Croatia', 'Cuba', 'Curacao(Netherlands)', 'Cyprus',
+                    'Czech Republic'],
+            'd' : ['Democratic Republic of the Congo', 'Denmark', 'Djibouti',
+                    'Dominica', 'Dominican Republic'],
+            'e' : ['East Timor', 'Ecuador', 'Egypt', 'El Salvador', 'Equatorial Guinea',
+                    'Eritrea', 'Estonia', 'Ethiopia'],
+            'f' : ['Falkland Islands(United Kingdom)', 'Faroe Islands(Denmark)',
+                    'Federated States of Micronesia', 'Fiji', 'Finland',
+                    'French Polynesia(France)',
+                    'French Southern and Antarctic Lands(France)'],
+            'g' : ['Gabon', 'Gambia', 'Georgia', 'Germany', 'Ghana',
+                    'Gibraltar(United Kingdom)', 'Greece', 'Greenland', 'Grenada',
+                    'Guam(United States)', 'Guatemala', 'Guernsey(United Kingdom)',
+                    'Guinea', 'Guinea-Bissau', 'Guyana'],
+            'h' : ['Haiti', 'Heard Island and McDonald Islands(Australia)',
+                    'Honduras', 'Hong Kong(China)', 'Hungary'],
+            'i' : ['Iceland', 'India', 'Indonesia', 'Iran', 'Iraq',
+                    'Isle of Man(British Crown Dependency)', 'Israel', 'Italy'],
+            'j' : ['Jamaica', 'Jan Mayen(Norway)', 'Japan',
+                    'Jersey(United Kingdom)', 'Jordan'],
+            'k' : ['Kazakhstan', 'Kenya', 'Kiribati', 'Kosovo', 'Kuwait',
+                    'Kyrgyzstan'],
+            'l' : ['Laos', 'Latvia', 'Lebanon', 'Lesotho', 'Liberia', 'Libya',
+                    'Liechtenstein', 'Lithuania', 'Luxembourg'],
+            'm' : ['Macau(China)', 'Macedonia', 'Madagascar', 'Malawi',
+                    'Malaysia', 'Maldives', 'Mali', 'Malta', 'Marshall Islands',
+                    'Mauritania', 'Mauritius', 'Mexico', 'Moldova', 'Monaco',
+                    'Metropolitan France&overseas regions(France)',
+                    'Mongolia', 'Montenegro', 'Montserrat(United Kingdom)',
+                    'Morocco', 'Mozambique', 'Myanmar'],
+            'n' : ['Nagorno-Karabakh', 'Namibia', 'Nauru', 'Niger', 'Nigeria',
+                    'Navassa Island(disputed)', 'Nepal', 'Netherlands',
+                    'New Caledonia(France)', 'New Zealand', 'Nicaragua',
+                    'Niue(New Zealand)', 'Norfolk Island(Australia)', 'North Korea',
+                    'Northern Cyprus', 'Northern Mariana Islands(United States)',
+                    'Norway'],
+            'o' : ['Oman'],
+            'p' : ['Pakistan', 'Palau', 'Panama', 'Papua New Guinea', 'Paraguay',
+                    'Peru', 'Philippines', 'Pitcairn Islands(United Kingdom)',
+                    'Poland', 'Portugal', 'Puerto Rico(United States)'],
+            'q' : ['Qatar'],
+            'r' : ['Republic of Ireland', 'Republic of the Congo', 'Romania',
+                    'Russia', 'Rwanda'],
+            's' : ['Saint Barthelemy(France)', 'Saint Kitts and Nevis',
+                    'Saint Helena, Ascension and Tristan da Cunha(United Kingdom)',
+                    'Saint Lucia', 'Saint Martin(France)', 'Samoa', 'San Marino',
+                    'Saint Pierre and Miquelon(France)', 'Sao Tome and Principe',
+                    'Saint Vincent and the Grenadines', 'Saudi Arabia',
+                    'Senegal', 'Serbia', 'Seychelles', 'Sierra Leone', 'Singapore',
+                    'Sint Maarten(Netherlands)', 'Slovakia', 'Slovenia', 'Somalia',
+                    'Solomon Islands', 'Somaliland', 'South Africa', 'South Korea',
+                    'South Georgia and the South Sandwich Islands(United Kingdom)',
+                    'South Ossetia', 'South Sudan', 'Spain', 'Spratly Islands(disputed)',
+                    'Sri Lanka', 'State of Palestine', 'Sudan', 'Suriname',
+                    'Svalbard(Norway)', 'Swaziland', 'Sweden', 'Switzerland', 'Syria'],
+            't' : ['Taiwan', 'Tajikistan', 'Tanzania', 'Thailand', 'Togo',
+                    'Tokelau(New Zealand)', 'Tonga', 'Transnistria',
+                    'Trinidad and Tobago', 'Tunisia', 'Turkey', 'Turkmenistan',
+                    'Turks and Caicos Islands(United Kingdom)', 'Tuvalu'],
+            'u' : ['U.S. Virgin Islands(United States)', 'Uganda', 'Ukraine',
+                    'United Arab Emirates', 'United Kingdom', 'United States',
+                    'United States Pacific Island Wildlife Refuges', 'Uruguay',
+                    'Uzbekistan'],
+            'v' : ['Vanuatu', 'Vatican City', 'Venezuela', 'Vietnam'],
+            'w' : ['Wake Island(United States)', 'Wallis and Futuna(France)',
+                    'Western Sahara'],
+            'y' : ['Yemen'],
+            'z' : ['Zambia', 'Zimbabwe']
+        }
+
+    return countries[char.lower()]
+

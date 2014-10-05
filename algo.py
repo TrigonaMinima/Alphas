@@ -1,4 +1,4 @@
-from core import *
+import core
 
 def permu(s):
     """
@@ -25,7 +25,7 @@ def permalgo(start=0, end=26):
     Returns a list containing all the permutations of the string of alphabets (lowercase) from start to end
     By default start is 0 and end is 26.
     """
-    return permu(alph(start,end))
+    return permu(core.alph(start,end))
 
 
 def upermalgo(start=0, end=26):
@@ -35,4 +35,4 @@ def upermalgo(start=0, end=26):
     Returns a list containing all the permutations of the string of alphabets (uppercase) from start to end
     By default start is 0 and end is 26.
     """
-    return permu(ualph(start,end))
+    return permu(core.ualph(start,end))

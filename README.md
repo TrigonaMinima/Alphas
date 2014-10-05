@@ -22,14 +22,15 @@ This module is for fun. It will try to do straight forward things which can be d
 15. NATO Phonetic
 16. Morse code for all the alphabets
 17. Pronunciation
+18. Countries starting with an alphabet
+19. [Alphabet song](https://en.wikipedia.org/wiki/Alphabet_song)
+20. Alphabet Love Song
 
 todo:
 
 2. cyclic rotations
 3. Lexicographic permutations (a range)
-8. [Alphabet song](https://en.wikipedia.org/wiki/Alphabet_song)
 10. [Pangrams](https://en.wikipedia.org/wiki/List_of_pangrams#Perfect_pangrams_in_English_.2826_letters.29)
-11. Countries starting with an alphabet
 
 
 more to come...
