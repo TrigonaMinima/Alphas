@@ -4,7 +4,7 @@ from itertools import permutations
 
 def alph(start=0, end=26):
     """
-    core.alph([start, [end]]) -> str
+    alphas.alph([start, [end]]) -> str
 
     Returns a string of alphabets in lowercase from start till end. By default the start
     is 0 and end is 26.
@@ -14,7 +14,7 @@ def alph(start=0, end=26):
 
 def ualph(start=0, end=26):
     """
-    core.ualph([start, [end]]) -> str
+    alphas.ualph([start, [end]]) -> str
 
     Returns a string of alphabets in uppercase from start till end. By default the start
     is 0 and end is 26.
@@ -22,9 +22,9 @@ def ualph(start=0, end=26):
     return string.ascii_uppercase[start:end]
 
 
-def alphlist(start=0, end=26):
+def alist(start=0, end=26):
     """
-    core.alphlist([start, [end]]) -> list
+    alphas.alist([start, [end]]) -> list
 
     Returns a list of alphabets in lowercase from start till end. By default the start
     is 0 and end is 26.
@@ -32,9 +32,9 @@ def alphlist(start=0, end=26):
     return list(alph(start, end))
 
 
-def ualphlist(start=0, end=26):
+def ualist(start=0, end=26):
     """
-    core.ualphlist([start, [end]]) -> list
+    alphas.ualist([start, [end]]) -> list
 
     Returns a list of alphabets in uppercase from start till end. By default the start
     is 0 and end is 26.
@@ -44,14 +44,14 @@ def ualphlist(start=0, end=26):
 
 def dic(value='', start=0, end=26):
     """
-    core.dic([value, [start, [end]]]) -> dict
+    alphas.dic([value, [start, [end]]]) -> dict
 
     Returns a dict of alphabets (key is lowercase alphabet and value is 'value') from
     start till end. Value is by default '', but can be anything. Every dict key will
     correspond to the same value. By default the start is 0 and end is 26.
     """
     d = {}
-    for a in alphlist(start, end):
+    for a in alist(start, end):
         d[a] = value
 
     return d
@@ -59,14 +59,14 @@ def dic(value='', start=0, end=26):
 
 def udic(value='', start=0, end=26):
     """
-    core.udic([value, [start, [end]]]) -> dict
+    alphas.udic([value, [start, [end]]]) -> dict
 
     Returns a dict of alphabets (key is uppercase alphabet and value is 'value') from
     start till end. Value is by default '', but can be anything. Every dict key will
     correspond to the same value. By default the start is 0 and end is 26.
     """
     d = {}
-    for a in ualphlist(start, end):
+    for a in ualist(start, end):
         d[a] = value
 
     return d
@@ -74,7 +74,7 @@ def udic(value='', start=0, end=26):
 
 def ascii(start=0, end=26):
     """
-    core.ascii([start, [end]]) -> dict
+    alphas.ascii([start, [end]]) -> dict
 
     Returns a dict of alphabets (key is lowerercase alphabet and value is ascii value) from
     start till end. By default the start is 0 and end is 26.
@@ -87,7 +87,7 @@ def ascii(start=0, end=26):
 
 def uascii(start=0, end=26):
     """
-    core.uascii([start, [end]]) -> dict
+    alphas.uascii([start, [end]]) -> dict
 
     Returns a dict of alphabets (key is uppercase alphabet and value is ascii value) from
     start till end. By default the start is 0 and end is 26.
@@ -98,10 +98,46 @@ def uascii(start=0, end=26):
     return asci
 
 
-# check #
-def permalpha(start=0, end=26):
+def vowel():
     """
-    core.permalpha([start, [end]]) -> list
+    core.vowel() -> list
+
+    Returns lowercase lowercase vowels.
+    """
+    return ['a', 'e', 'i', 'o', 'u']
+
+
+def uvowel():
+    """
+    core.uvowel() -> list
+
+    Returns lowercase uppercase vowels.
+    """
+    return ['A', 'E', 'I', 'O', 'U']
+
+
+def consonants():
+    """
+    core.consonants() -> list
+
+    Returns all the lowercase consonants.
+    """
+    return list(set(alist()) - set(vowel())).sort()
+
+
+def uconsonants():
+    """
+    core.uconsonants() -> list
+
+    Returns all the uppercase consonants.
+    """
+    return list(set(ualist()) - set(uvowel())).sort()
+
+
+# check #
+def permalpha(start=0, end=20):
+    """
+    alphas.permalpha([start, [end]]) -> list
 
     Returns a list of permutations of alphabets (lowercase) from start
     till end.By default the start is 0 and end is 26.
@@ -110,9 +146,9 @@ def permalpha(start=0, end=26):
     return perms
 
 
-def upermalpha(start=0, end=26):
+def upermalpha(start=0, end=20):
     """
-    core.upermalpha([start, [end]]) -> list
+    alphas.upermalpha([start, [end]]) -> list
 
     Returns a list of permutations of alphabets (uppercase) from start
     till end.By default the start is 0 and end is 26.
@@ -123,7 +159,7 @@ def upermalpha(start=0, end=26):
 
 def lexicographically_next_perm(a):
     """
-    core.lexicographically_next_perm(a) -> boolean
+    alphas.lexicographically_next_perm(a) -> boolean
 
     Generates the lexicographically next permutation.
 
@@ -146,88 +182,36 @@ def lexicographically_next_perm(a):
     return True
 
 
-def lex(start=0, end=26):
+def lex(start=0, end=20):
     '''
-    core.lex([start, [end]]) -> prints list
+    alphas.lex([start, [end]]) -> prints list
 
     Generates all the lexicographically next permutations of alphabets (lowercase)
     from start till end.By default the start is 0 and end is 26.
     '''
-    li = alphlist(start, end)
+    li = alist(start, end)
     print(li)
     while lexicographically_next_perm(li):
         print(li)
 
 
-def ulex(start=0, end=26):
+def ulex(start=0, end=20):
     '''
-    core.ulex([start, [end]]) -> prints list
+    alphas.ulex([start, [end]]) -> prints list
 
     Generates all the lexicographically next permutations of alphabets (uppercase)
     from start till end.By default the start is 0 and end is 26.
     '''
-    li = ualphlist(start, end)
+    li = ualist(start, end)
     print(li)
     while lexicographically_next_perm(li):
         print(li)
-
-
-def vowel(start=0, end=26):
-    """
-    core.vowel([start, [end]]) -> int
-    
-    Returns no. of vowels in the string of alphabets in lowercase from start till end.
-    By default the start is 0 and end is 26.
-    """
-    vow = ['a','e','i','o','u']
-    vowels = 0
-    for a in alphlist(start,end):
-        if a in vow:
-            vowels += 1
-    return vowels
-
-
-def uvowel(start=0, end=26):
-    """
-    core.uvowel([start, [end]]) -> int
-    
-    Returns no. of vowels in the string of alphabets in uppercase from start till end.
-    By default the start is 0 and end is 26.
-    """
-    vow = ['A','E','I','O','U']
-    vowels = 0
-    for a in ualphlist(start,end):
-        if a in vow:
-            vowels += 1
-    return vowels
-
-
-def consonants(start=0, end=26):
-    """
-    core.consonants([start, [end]]) -> int
-    
-    Returns no. of consonants in the string of alphabets in lowercase from start till end.
-    By default the start is 0 and end is 26.
-    """
-    vowels = vowel(start,end)
-    return start + end - vowels
-
-
-def uconsonants(start=0, end=26):
-    """
-    core.uconsonants([start, [end]]) -> int
-    
-    Returns no. of consonants in the string of alphabets in uppercase from start till end.
-    By default the start is 0 and end is 26.
-    """
-    vowels = uvowel(start,end)
-    return start + end - vowels
 
 
 #if __name__ == '__main__':
 #   print alph()
 #   print ualph()
-#   print alphlist(0,4)
+#   print alist()
 #   print dic()
 #   print bi()
 #   print oct()
@@ -235,4 +219,3 @@ def uconsonants(start=0, end=26):
 #   print rotalpha()
 #   print upermalpha(0,4)
 #   ulex(2,7)
-#print uconsonants(0,4)
