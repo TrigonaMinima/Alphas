@@ -4,7 +4,7 @@ from itertools import permutations
 
 def alph(start=0, end=26):
     """
-    alphas.alph([start, [end]]) -> str
+    core.alph([start, [end]]) -> str
 
     Returns a string of alphabets in lowercase from start till end. By default the start
     is 0 and end is 26.
@@ -14,7 +14,7 @@ def alph(start=0, end=26):
 
 def ualph(start=0, end=26):
     """
-    alphas.ualph([start, [end]]) -> str
+    core.ualph([start, [end]]) -> str
 
     Returns a string of alphabets in uppercase from start till end. By default the start
     is 0 and end is 26.
@@ -24,7 +24,7 @@ def ualph(start=0, end=26):
 
 def alist(start=0, end=26):
     """
-    alphas.alist([start, [end]]) -> list
+    core.alist([start, [end]]) -> list
 
     Returns a list of alphabets in lowercase from start till end. By default the start
     is 0 and end is 26.
@@ -34,7 +34,7 @@ def alist(start=0, end=26):
 
 def ualist(start=0, end=26):
     """
-    alphas.ualist([start, [end]]) -> list
+    core.ualist([start, [end]]) -> list
 
     Returns a list of alphabets in uppercase from start till end. By default the start
     is 0 and end is 26.
@@ -44,7 +44,7 @@ def ualist(start=0, end=26):
 
 def dic(value='', start=0, end=26):
     """
-    alphas.dic([value, [start, [end]]]) -> dict
+    core.dic([value, [start, [end]]]) -> dict
 
     Returns a dict of alphabets (key is lowercase alphabet and value is 'value') from
     start till end. Value is by default '', but can be anything. Every dict key will
@@ -59,7 +59,7 @@ def dic(value='', start=0, end=26):
 
 def udic(value='', start=0, end=26):
     """
-    alphas.udic([value, [start, [end]]]) -> dict
+    core.udic([value, [start, [end]]]) -> dict
 
     Returns a dict of alphabets (key is uppercase alphabet and value is 'value') from
     start till end. Value is by default '', but can be anything. Every dict key will
@@ -74,7 +74,7 @@ def udic(value='', start=0, end=26):
 
 def ascii(start=0, end=26):
     """
-    alphas.ascii([start, [end]]) -> dict
+    core.ascii([start, [end]]) -> dict
 
     Returns a dict of alphabets (key is lowerercase alphabet and value is ascii value) from
     start till end. By default the start is 0 and end is 26.
@@ -87,7 +87,7 @@ def ascii(start=0, end=26):
 
 def uascii(start=0, end=26):
     """
-    alphas.uascii([start, [end]]) -> dict
+    core.uascii([start, [end]]) -> dict
 
     Returns a dict of alphabets (key is uppercase alphabet and value is ascii value) from
     start till end. By default the start is 0 and end is 26.
@@ -135,9 +135,9 @@ def uconsonants():
 
 
 # check #
-def permalpha(start=0, end=20):
+def permalpha(start=0, end=26):
     """
-    alphas.permalpha([start, [end]]) -> list
+    core.permalpha([start, [end]]) -> list
 
     Returns a list of permutations of alphabets (lowercase) from start
     till end.By default the start is 0 and end is 26.
@@ -146,9 +146,9 @@ def permalpha(start=0, end=20):
     return perms
 
 
-def upermalpha(start=0, end=20):
+def upermalpha(start=0, end=26):
     """
-    alphas.upermalpha([start, [end]]) -> list
+    core.upermalpha([start, [end]]) -> list
 
     Returns a list of permutations of alphabets (uppercase) from start
     till end.By default the start is 0 and end is 26.
@@ -159,7 +159,7 @@ def upermalpha(start=0, end=20):
 
 def lexicographically_next_perm(a):
     """
-    alphas.lexicographically_next_perm(a) -> boolean
+    core.lexicographically_next_perm(a) -> boolean
 
     Generates the lexicographically next permutation.
 
@@ -184,7 +184,7 @@ def lexicographically_next_perm(a):
 
 def lex(start=0, end=20):
     '''
-    alphas.lex([start, [end]]) -> prints list
+    core.lex([start, [end]]) -> prints list
 
     Generates all the lexicographically next permutations of alphabets (lowercase)
     from start till end.By default the start is 0 and end is 26.
@@ -197,7 +197,7 @@ def lex(start=0, end=20):
 
 def ulex(start=0, end=20):
     '''
-    alphas.ulex([start, [end]]) -> prints list
+    core.ulex([start, [end]]) -> prints list
 
     Generates all the lexicographically next permutations of alphabets (uppercase)
     from start till end.By default the start is 0 and end is 26.
