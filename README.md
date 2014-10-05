@@ -26,10 +26,7 @@ This module is for fun. It will try to do straight forward things which can be d
 19. [Alphabet song](https://en.wikipedia.org/wiki/Alphabet_song)
 20. Alphabet Love Song
 21. Permutations (a range)
-
-todo:
 22. Cyclic rotations
-
 
 
 You can suggest more...
