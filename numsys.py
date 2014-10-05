@@ -1,11 +1,11 @@
-from core import *
+import core
 
 def binary(char):
     """
     numsys.binary(char) -> int
 
     Returns binary value of any alphabet.
-    """    
+    """
     return "{0:b}".format(ord(char))
 
 
@@ -17,7 +17,7 @@ def bi(start=0,end=26):
     codes in binary as the value.
     """
     bi = {}
-    for a in alphlist(start,end):
+    for a in core.alist(start,end):
         bi[a] = binary(a)
     return bi
 
@@ -30,7 +30,7 @@ def ubi(start=0,end=26):
     codes in binary as the value.
     """
     bi = {}
-    for a in ualphlist(start,end):
+    for a in core.ualist(start,end):
         bi[a] = binary(a)
     return bi
 
@@ -52,7 +52,7 @@ def oct(start=0,end=26):
     codes in octal as the value.
     """
     octa = {}
-    for a in alphlist(start,end):
+    for a in core.alist(start,end):
         octa[a] = octal(a)
     return octa
 
@@ -65,7 +65,7 @@ def uoct(start=0,end=26):
     codes in octal as the value.
     """
     octa = {}
-    for a in ualphlist(start,end):
+    for a in core.ualist(start,end):
         octa[a] = octal(a)
     return octa
 
@@ -87,7 +87,7 @@ def hex(start=0,end=26):
     codes in hexadecimal as the value.
     """
     hexa = {}
-    for a in alphlist(start,end):
+    for a in core.alist(start,end):
         hexa[a] = hexadecimal(a)
     return hexa
 
@@ -100,6 +100,6 @@ def uhex(start=0,end=26):
     codes in hexadecimal as the value.
     """
     hexa = {}
-    for a in ualphlist(start,end):
+    for a in core.ualist(start,end):
         hexa[a] = hexadecimal(a)
     return hexa
