@@ -1,4 +1,5 @@
 import core
+import time
 
 def braille(start=0, end=26):
     """
@@ -171,7 +172,7 @@ def nato(char):
 
 def pronun(char):
     """
-    fun.pronun(char) -> list
+    fun.pronun(char) -> dict
 
     input is a single alphabet.
 
@@ -269,3 +270,55 @@ def pronun(char):
     }
 
     return letters[char.lower()]
+
+
+def song():
+    """
+    Prints the lyrics of The Alphabet Song, with the proper time gap.
+    """
+    lyrics = [['A', 'B', 'C', 'D', 'E', 'F', 'G'],
+                ['H', 'I', 'J', 'K', 'LMNO', 'P'],
+                ['Q', 'R', 'S'],
+                ['T', 'U', 'V'],
+                ['W'],
+                ['X'],
+                ['Y'],
+                ['and','Z'],
+                ['Now I know my ABCs'],
+                'Next time, won\'t you sing with me?']
+
+    for line in lyrics:
+        for l in line:
+            print(l)
+            time.sleep(.2)
+        time.sleep(1)
+
+
+def lovesong():
+    """
+    Prints the lyrics of The Alphabet Love Song, with the proper time gap.
+    """
+    lyrics = ["A, you're adorable",
+                "B, you're so beautiful",
+                "C, you're a cutie full of charms",
+                "D, you're a darling",
+                "And E, you're exciting",
+                "And F, you're a feather in my arms",
+                "G, you look good to me",
+                "H, you're so heavenly",
+                "I, you're the one I idolize",
+                "J, we're like Jack and Jill",
+                "K, you're so kissable",
+                "L, is the love light in your eyes",
+                "M, N, O, P",
+                "I could go on all day",
+                "Q, R, S, T",
+                "Alphabetically speaking: \"You're OK\"",
+                "U, made my life complete",
+                "V, means you're very sweet",
+                "W, X, Y, Z",
+                "It's fun to wander through the alphabet with you to tell you what you mean to me."]
+
+    for line in lyrics:
+        print(line)
+        time.sleep(2)

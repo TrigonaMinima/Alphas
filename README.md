@@ -16,18 +16,18 @@ This module is for fun. It will try to do straight forward things which can be d
 9. Binary
 10. Octal
 11. Hexadecimal
+12. Vowels and consonants
+13. Lorem ipsum
+14. [Braile (maybe)](https://en.wikipedia.org/wiki/English_Braille#Unified_English_Braille)
+15. NATO Phonetic
+16. Morse code for all the alphabets
+17. Pronunciation
 
 todo:
 
-1. Morse code for all the alphabets
 2. cyclic rotations
 3. Lexicographic permutations (a range)
-4. Vowels and consonants
-5. [NATO Phonetic](https://en.wikipedia.org/wiki/NATO_phonetic_alphabet)
-6. [Pronunciation](https://en.wikipedia.org/wiki/English_alphabet)
-7. [Braile (maybe)](https://en.wikipedia.org/wiki/English_Braille#Unified_English_Braille)
 8. [Alphabet song](https://en.wikipedia.org/wiki/Alphabet_song)
-9. [Lorem ipsum](https://en.wikipedia.org/wiki/Lorem_ipsum)
 10. [Pangrams](https://en.wikipedia.org/wiki/List_of_pangrams#Perfect_pangrams_in_English_.2826_letters.29)
 11. Countries starting with an alphabet
 
