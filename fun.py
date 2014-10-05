@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-import core
+from Alphas import core
 import time
 
 def braille(start=0, end=26):

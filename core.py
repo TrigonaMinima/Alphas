@@ -145,15 +145,15 @@ def permu(s):
     else:
         for i in range(len(s)):
             c = s[i]
-            for perm in permu(s[:i] + s[i+1:]):
-                res += [c + perm]
+            for per in permu(s[:i] + s[i+1:]):
+                res += [c + per]
 
     return res
 
 
-def permalgo(start=0, end=26):
+def perm(start=0, end=26):
     """
-    core.permalgo([start, [end]]) -> list
+    core.perm([start, [end]]) -> list
 
     Returns a list containing all the permutations of the string of alphabets (lowercase) from start to end.
     By default start is 0 and end is 26.
@@ -161,9 +161,9 @@ def permalgo(start=0, end=26):
     return permu(alph(start, end))
 
 
-def upermalgo(start=0, end=26):
+def uperm(start=0, end=26):
     """
-    core.upermalgo([start, [end]]) -> list
+    core.uperm([start, [end]]) -> list
 
     Returns a list containing all the permutations of the string of alphabets (uppercase) from start to end.
     By default start is 0 and end is 26.
@@ -171,33 +171,33 @@ def upermalgo(start=0, end=26):
     return permu(ualph(start,end))
 
 
-def cyclic_rot(start=0, end=26):
+def cyclic(start=0, end=26):
     """
-    core.cyclic_rot([start, [end]]) -> list
+    core.cyclic([start, [end]]) -> list
 
     Returns a list containing all the cyclic rotations of the string of alphabets (lowercase) from start to end.
-    By default start is 0 and end is 26. 
+    By default start is 0 and end is 26.
     """
-    cyclic = []
+    cycle = []
     a = alph(start, end)
     for i in range(0,len(a)):
-        cyclic.append(a[i:]+a[:i])
-    return cyclic
+        cycle.append(a[i:]+a[:i])
+    return cycle
 
 
-def ucyclic_rot(start=0, end=26):
+def ucyclic(start=0, end=26):
     """
-    core.ucyclic_rot([start, [end]]) -> list
+    core.ucyclic([start, [end]]) -> list
 
     Returns a list containing all the cyclic rotations of the string of alphabets (uppercase) from start to end.
-    By default start is 0 and end is 26. 
+    By default start is 0 and end is 26.
     """
-    cyclic = []
+    cycle = []
     a = ualph(start, end)
     for i in range(0,len(a)):
-        cyclic.append(a[i:]+a[:i])
-    return cyclic
-    
+        cycle.append(a[i:]+a[:i])
+    return cycle
+
 
 #if __name__ == '__main__':
 #   print alph()

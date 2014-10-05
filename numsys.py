@@ -1,4 +1,4 @@
-import core
+from Alphas import core
 
 def binary(char):
     """
