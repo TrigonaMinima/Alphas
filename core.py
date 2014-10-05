@@ -1,5 +1,4 @@
 import string
-from itertools import permutations
 
 
 def alph(start=0, end=26):
@@ -134,78 +133,42 @@ def uconsonants():
     return list(set(ualist()) - set(uvowel())).sort()
 
 
-# check #
-def permalpha(start=0, end=26):
+def permu(s):
     """
-    core.permalpha([start, [end]]) -> list
+    core.permu(s) -> list
 
-    Returns a list of permutations of alphabets (lowercase) from start
-    till end.By default the start is 0 and end is 26.
+    Returns a list of all permutations of a string.
     """
-    perms = [''.join(p) for p in permutations(alph(start,end))]
-    return perms
+    res = []
+    if len(s) == 1:
+        res = [s]
+    else:
+        for i in range(len(s)):
+            c = s[i]
+            for perm in permu(s[:i] + s[i+1:]):
+                res += [c + perm]
+
+    return res
 
 
-def upermalpha(start=0, end=26):
+def permalgo(start=0, end=26):
     """
-    core.upermalpha([start, [end]]) -> list
+    core.permalgo([start,[end]]) -> list
 
-    Returns a list of permutations of alphabets (uppercase) from start
-    till end.By default the start is 0 and end is 26.
+    Returns a list containing all the permutations of the string of alphabets (lowercase) from start to end
+    By default start is 0 and end is 26.
     """
-    perms = [''.join(p) for p in permutations(ualph(start,end))]
-    return perms
+    return permu(alph(start, end))
 
 
-def lexicographically_next_perm(a):
+def upermalgo(start=0, end=26):
     """
-    core.lexicographically_next_perm(a) -> boolean
+    core.upermalgo([start,[end]]) -> list
 
-    Generates the lexicographically next permutation.
-
-    Input: a permutation, called "a". This method modifies
-    "a" in place. Returns True if we could generate a next
-    permutation. Returns False if it was the last permutation
-    lexicographically.
+    Returns a list containing all the permutations of the string of alphabets (uppercase) from start to end
+    By default start is 0 and end is 26.
     """
-    i = len(a) - 2
-    while not (i < 0 or a[i] < a[i+1]):
-        i -= 1
-    if i < 0:
-        return False
-    # else
-    j = len(a) - 1
-    while not (a[j] > a[i]):
-        j -= 1
-    a[i], a[j] = a[j], a[i]        # swap
-    a[i+1:] = reversed(a[i+1:])    # reverse elements from position i+1 till the end of the sequence
-    return True
-
-
-def lex(start=0, end=20):
-    '''
-    core.lex([start, [end]]) -> prints list
-
-    Generates all the lexicographically next permutations of alphabets (lowercase)
-    from start till end.By default the start is 0 and end is 26.
-    '''
-    li = alist(start, end)
-    print(li)
-    while lexicographically_next_perm(li):
-        print(li)
-
-
-def ulex(start=0, end=20):
-    '''
-    core.ulex([start, [end]]) -> prints list
-
-    Generates all the lexicographically next permutations of alphabets (uppercase)
-    from start till end.By default the start is 0 and end is 26.
-    '''
-    li = ualist(start, end)
-    print(li)
-    while lexicographically_next_perm(li):
-        print(li)
+    return permu(ualph(start,end))
 
 
 #if __name__ == '__main__':
@@ -218,4 +181,4 @@ def ulex(start=0, end=20):
 #   print hex()
 #   print rotalpha()
 #   print upermalpha(0,4)
-#   ulex(2,7)
+#   print ulex(2,7)
