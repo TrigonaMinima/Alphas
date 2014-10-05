@@ -126,4 +126,44 @@ def morse(char):
     return letters[char.lower()]
 
 
+def nato(char):
+    """
+    fun.nato(char) -> list
 
+    input is a single alphabet.
+
+    Returns NATO notation of the alphabet.`
+    """
+    if not char.isalpha() or len(char) > 1:
+        raise Exception("Not a valid input!! Give in a single character.")
+
+    letters = {
+            'a' : 'Alfa',
+            'b' : 'Bravo',
+            'c' : 'Charlie',
+            'd' : 'Delta',
+            'e' : 'Echo',
+            'f' : 'Foxtrot',
+            'g' : 'Golf',
+            'h' : 'Hotel',
+            'i' : 'India',
+            'j' : 'Juliett',
+            'k' : 'Kilo',
+            'l' : 'Lima',
+            'm' : 'Mike',
+            'n' : 'November',
+            'o' : 'Oscar',
+            'p' : 'Papa',
+            'q' : 'Ouebec',
+            'r' : 'Romeo',
+            's' : 'Sierra',
+            't' : 'Tango',
+            'u' : 'Uniform',
+            'v' : 'Victor',
+            'w' : 'Whiskey',
+            'x' : 'X-ray',
+            'y' : 'Yankee',
+            'z' : 'Zulu'
+    }
+
+    return letters[char.lower()]
