@@ -25,12 +25,11 @@ This module is for fun. It will try to do straight forward things which can be d
 18. Countries starting with an alphabet
 19. [Alphabet song](https://en.wikipedia.org/wiki/Alphabet_song)
 20. Alphabet Love Song
+21. Permutations (a range)
 
 todo:
-
-2. cyclic rotations
-3. Lexicographic permutations (a range)
-10. [Pangrams](https://en.wikipedia.org/wiki/List_of_pangrams#Perfect_pangrams_in_English_.2826_letters.29)
+22. Cyclic rotations
 
 
-more to come...
+
+You can suggest more...

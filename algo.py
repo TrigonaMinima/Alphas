@@ -3,8 +3,8 @@ import core
 def permu(s):
     """
     algo.permu(s) -> list
-    
-    Returns a list of all permutations of a string.   
+
+    Returns a list of all permutations of a string.
     """
     res = []
     if len(s) == 1:
@@ -19,13 +19,13 @@ def permu(s):
 
 
 def permalgo(start=0, end=26):
-	"""
+    """
     algo.permalgo([start,[end]]) -> list
 
     Returns a list containing all the permutations of the string of alphabets (lowercase) from start to end
     By default start is 0 and end is 26.
     """
-    return permu(core.alph(start,end))
+    return permu(core.alph(start, end))
 
 
 def upermalgo(start=0, end=26):
