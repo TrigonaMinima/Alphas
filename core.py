@@ -153,9 +153,9 @@ def permu(s):
 
 def permalgo(start=0, end=26):
     """
-    core.permalgo([start,[end]]) -> list
+    core.permalgo([start, [end]]) -> list
 
-    Returns a list containing all the permutations of the string of alphabets (lowercase) from start to end
+    Returns a list containing all the permutations of the string of alphabets (lowercase) from start to end.
     By default start is 0 and end is 26.
     """
     return permu(alph(start, end))
@@ -163,13 +163,41 @@ def permalgo(start=0, end=26):
 
 def upermalgo(start=0, end=26):
     """
-    core.upermalgo([start,[end]]) -> list
+    core.upermalgo([start, [end]]) -> list
 
-    Returns a list containing all the permutations of the string of alphabets (uppercase) from start to end
+    Returns a list containing all the permutations of the string of alphabets (uppercase) from start to end.
     By default start is 0 and end is 26.
     """
     return permu(ualph(start,end))
 
+
+def cyclic_rot(start=0, end=26):
+    """
+    core.cyclic_rot([start, [end]]) -> list
+
+    Returns a list containing all the cyclic rotations of the string of alphabets (lowercase) from start to end.
+    By default start is 0 and end is 26. 
+    """
+    cyclic = []
+    a = alph(start, end)
+    for i in range(0,len(a)):
+        cyclic.append(a[i:]+a[:i])
+    return cyclic
+
+
+def ucyclic_rot(start=0, end=26):
+    """
+    core.ucyclic_rot([start, [end]]) -> list
+
+    Returns a list containing all the cyclic rotations of the string of alphabets (uppercase) from start to end.
+    By default start is 0 and end is 26. 
+    """
+    cyclic = []
+    a = ualph(start, end)
+    for i in range(0,len(a)):
+        cyclic.append(a[i:]+a[:i])
+    return cyclic
+    
 
 #if __name__ == '__main__':
 #   print alph()
