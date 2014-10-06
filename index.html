@@ -1,0 +1,306 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Alphas by TrigonaMinima</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1 class="header">Alphas</h1>
+        <p class="header">Play with alphabets</p>
+
+        <ul>
+          <li class="download"><a class="buttons" href="https://github.com/TrigonaMinima/Alphas/zipball/master">Download ZIP</a></li>
+          <li class="download"><a class="buttons" href="https://github.com/TrigonaMinima/Alphas/tarball/master">Download TAR</a></li>
+          <li><a class="buttons github" href="https://github.com/TrigonaMinima/Alphas">View On GitHub</a></li>
+        </ul>
+
+        <p class="header">This project is maintained by <a class="header name" href="https://github.com/TrigonaMinima">TrigonaMinima</a></p>
+
+
+      </header>
+      <section>
+        <h1>
+<a name="alphaspy" class="anchor" href="#alphaspy"><span class="octicon octicon-link"></span></a>Alphas.py</h1>
+
+<p>Play with alphabets.</p>
+
+<p>This module is for fun. It will try to do straight forward things which can be done with the alphabets.</p>
+
+<h3>
+<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h3>
+
+<h4>
+<a name="import" class="anchor" href="#import"><span class="octicon octicon-link"></span></a>Import</h4>
+
+<pre><code>from Alphas import core, crypt, fun, numsys
+</code></pre>
+
+<h4>
+<a name="core-functions" class="anchor" href="#core-functions"><span class="octicon octicon-link"></span></a>Core functions</h4>
+
+<h5>
+<a name="listing-alphabets" class="anchor" href="#listing-alphabets"><span class="octicon octicon-link"></span></a>Listing alphabets</h5>
+
+<pre><code>&gt;&gt;&gt;
+&gt;&gt;&gt; Alphas.core.alph(0,23)
+'abcdefghijklmnopqrstuvw'
+&gt;&gt;&gt;
+&gt;&gt;&gt; Alphas.core.ualph(0,23)
+'ABCDEFGHIJKLMNOPQRSTUVW'
+&gt;&gt;&gt;
+&gt;&gt;&gt; Alphas.core.alist(4,20)
+['e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't']
+&gt;&gt;&gt;
+&gt;&gt;&gt; Alphas.core.ualist(4,20)
+['E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T']
+&gt;&gt;&gt;
+</code></pre>
+
+<h5>
+<a name="alphabets-with-dic" class="anchor" href="#alphabets-with-dic"><span class="octicon octicon-link"></span></a>Alphabets with dic</h5>
+
+<pre><code>&gt;&gt;&gt; Alphas.core.dic(0,2,6)
+{'f': 0, 'c': 0, 'd': 0, 'e': 0}
+&gt;&gt;&gt;
+&gt;&gt;&gt; Alphas.core.udic(0,2,6)
+{'E': 0, 'D': 0, 'C': 0, 'F': 0}
+&gt;&gt;&gt;
+</code></pre>
+
+<h5>
+<a name="alphabets-in-numbers" class="anchor" href="#alphabets-in-numbers"><span class="octicon octicon-link"></span></a>Alphabets in numbers</h5>
+
+<pre><code>&gt;&gt;&gt; Alphas.core.ascii(5,10)
+{'i': 105, 'g': 103, 'h': 104, 'f': 102, 'j': 106}
+&gt;&gt;&gt;
+&gt;&gt;&gt; Alphas.core.uascii(5,10)
+{'I': 73, 'G': 71, 'H': 72, 'F': 70, 'J': 74}
+&gt;&gt;&gt;
+</code></pre>
+
+<h5>
+<a name="vowels-and-consonants" class="anchor" href="#vowels-and-consonants"><span class="octicon octicon-link"></span></a>Vowels and Consonants</h5>
+
+<pre><code>&gt;&gt;&gt; Alphas.core.vowel()
+['a', 'e', 'i', 'o', 'u']
+&gt;&gt;&gt;
+&gt;&gt;&gt; Alphas.core.uvowel()
+['A', 'E', 'I', 'O', 'U']
+&gt;&gt;&gt;
+&gt;&gt;&gt; ac.consonants()
+['q', 'j', 'r', 'z', 't', 'f', 'c', 'n', 's', 'y', 'b', 'h', 'w', 'm', 'v', 'g', 'x', 'l', 'k', 'd', 'p']
+&gt;&gt;&gt;
+&gt;&gt;&gt; ac.uconsonants()
+['S', 'X', 'Y', 'C', 'N', 'L', 'K', 'B', 'F', 'W', 'H', 'J', 'M', 'T', 'G', 'P', 'V', 'D', 'Q', 'Z', 'R']
+&gt;&gt;&gt;
+</code></pre>
+
+<h5>
+<a name="alphabets-got-permuted" class="anchor" href="#alphabets-got-permuted"><span class="octicon octicon-link"></span></a>Alphabets got permuted</h5>
+
+<pre><code>&gt;&gt;&gt; Alphas.core.perm(0,3)
+['abc', 'acb', 'bac', 'bca', 'cab', 'cba']
+&gt;&gt;&gt;
+&gt;&gt;&gt; Alphas.core.uperm(1,4)
+['BCD', 'BDC', 'CBD', 'CDB', 'DBC', 'DCB']
+&gt;&gt;&gt;
+&gt;&gt;&gt; Alphas.core.cyclic(0,5)
+['abcde', 'bcdea', 'cdeab', 'deabc', 'eabcd']
+&gt;&gt;&gt;
+&gt;&gt;&gt; Alphas.core.ucyclic(0,5)
+['ABCDE', 'BCDEA', 'CDEAB', 'DEABC', 'EABCD']
+&gt;&gt;&gt;
+</code></pre>
+
+<h4>
+<a name="crypt-functions" class="anchor" href="#crypt-functions"><span class="octicon octicon-link"></span></a>Crypt functions</h4>
+
+<h5>
+<a name="alphabets-in-cryptanalysis" class="anchor" href="#alphabets-in-cryptanalysis"><span class="octicon octicon-link"></span></a>Alphabets in cryptanalysis</h5>
+
+<pre><code>&gt;&gt;&gt;
+&gt;&gt;&gt; Alphas.crypt.freqal("This module is for fun. It will try to do straight forward things which can be done with the alphabets.")
+{'d': 4, 'i': 8, 'v': 0, 'p': 1, 'u': 2, 'y': 1, 'a': 5, 'b': 2, 'x': 0, 'o': 6, 'j': 0, 'q': 0, 'c': 2, 'e': 5, 'g': 2, 'h': 8, 'k': 0, 'z': 0, 'f': 3, 'n': 4, 'm': 1, 'w': 4, 'r': 5, 's': 5, 't': 10, 'l': 4}
+&gt;&gt;&gt;
+</code></pre>
+
+<h5>
+<a name="rot-alphabets" class="anchor" href="#rot-alphabets"><span class="octicon octicon-link"></span></a>ROT Alphabets</h5>
+
+<pre><code>&gt;&gt;&gt; Alphas.crypt.rot(13,2,6)
+{'c': 'p', 'd': 'q', 'f': 's', 'e': 'r'}
+&gt;&gt;&gt;
+&gt;&gt;&gt; Alphas.crypt.urot(13,2,6)
+{'C': 'P', 'E': 'R', 'D': 'Q', 'F': 'S'}
+&gt;&gt;&gt;
+</code></pre>
+
+<h4>
+<a name="numsys-functions" class="anchor" href="#numsys-functions"><span class="octicon octicon-link"></span></a>NumSys functions</h4>
+
+<h5>
+<a name="alphabets-in-0s-and-1s" class="anchor" href="#alphabets-in-0s-and-1s"><span class="octicon octicon-link"></span></a>Alphabets in 0's and 1's</h5>
+
+<pre><code>&gt;&gt;&gt;
+&gt;&gt;&gt; Alphas.numsys.binary('b')
+'1100010'
+&gt;&gt;&gt;
+&gt;&gt;&gt; Alphas.numsys.binary('B')
+'1000010'
+&gt;&gt;&gt;
+&gt;&gt;&gt; Alphas.numsys.bi(0,4)
+{'c': '1100011', 'd': '1100100', 'a': '1100001', 'b': '1100010'}
+&gt;&gt;&gt;
+&gt;&gt;&gt; Alphas.numsys.ubi(0,4)
+{'C': '1000011', 'A': '1000001', 'D': '1000100', 'B': '1000010'}
+&gt;&gt;&gt;
+</code></pre>
+
+<h5>
+<a name="alphabets-in-8s" class="anchor" href="#alphabets-in-8s"><span class="octicon octicon-link"></span></a>Alphabets in 8's</h5>
+
+<pre><code>&gt;&gt;&gt; Alphas.numsys.octal('Z')
+'132'
+&gt;&gt;&gt;
+&gt;&gt;&gt; Alphas.numsys.octal('z')
+'172'
+&gt;&gt;&gt;
+&gt;&gt;&gt; Alphas.numsys.oct(20,26)
+{'z': '172', 'y': '171', 'v': '166', 'u': '165', 'w': '167', 'x': '170'}
+&gt;&gt;&gt;
+&gt;&gt;&gt; Alphas.numsys.uoct(20,26)
+{'Y': '131', 'W': '127', 'U': '125', 'V': '126', 'X': '130', 'Z': '132'}
+&gt;&gt;&gt;
+</code></pre>
+
+<h5>
+<a name="alphabets-in-16s-obviously" class="anchor" href="#alphabets-in-16s-obviously"><span class="octicon octicon-link"></span></a>Alphabets in 16's (obviously)</h5>
+
+<pre><code>&gt;&gt;&gt; Alphas.numsys.hexadecimal('S')
+'53'
+&gt;&gt;&gt;
+&gt;&gt;&gt; Alphas.numsys.hexadecimal('s')
+'73'
+&gt;&gt;&gt;
+&gt;&gt;&gt; Alphas.numsys.hex(2,7)
+{'c': '63', 'd': '64', 'g': '67', 'f': '66', 'e': '65'}
+&gt;&gt;&gt;
+&gt;&gt;&gt; Alphas.numsys.uhex(2,7)
+{'C': '43', 'G': '47', 'E': '45', 'D': '44', 'F': '46'}
+&gt;&gt;&gt;
+</code></pre>
+
+<h4>
+<a name="fun-functions" class="anchor" href="#fun-functions"><span class="octicon octicon-link"></span></a>Fun functions</h4>
+
+<pre><code>&gt;&gt;&gt;
+&gt;&gt;&gt; Alphas.fun.braille(3,5)
+{'d': [[1, 1], [0, 1], [0, 0]], 'e': [[1, 0], [0, 1], [0, 0]]}
+&gt;&gt;&gt;
+&gt;&gt;&gt; Alphas.fun.morse('S')
+['...', 'di-di-dit']
+&gt;&gt;&gt;
+&gt;&gt;&gt; Alphas.fun.morse('Z')
+['__..', 'dah-dah-di-dit']
+&gt;&gt;&gt;
+&gt;&gt;&gt; Alphas.fun.nato('A')
+'Alfa'
+&gt;&gt;&gt;
+&gt;&gt;&gt; Alphas.fun.nato('d')
+'Delta'
+&gt;&gt;&gt;
+&gt;&gt;&gt; Alphas.fun.pronun('e')
+{'e': '/ˈiː/'}
+&gt;&gt;&gt;
+&gt;&gt;&gt; Alphas.fun.pronun('z')
+{'izzard': '/ˈɪzərd/', 'zee': '/ˈziː/', 'zed': '/ˈzɛd/'}
+&gt;&gt;&gt;
+&gt;&gt;&gt; Alphas.fun.song()
+A
+B
+C
+D
+E
+F
+G
+H
+I
+J
+K
+LMNO
+P
+Q
+R
+S
+T
+U
+V
+W
+X
+Y
+and
+Z
+Now I know my ABCs
+Next time, won't you sing with me?
+&gt;&gt;&gt;
+&gt;&gt;&gt; Alphas.fun.lovesong()
+A, you're adorable
+B, you're so beautiful
+C, you're a cutie full of charms
+D, you're a darling
+And E, you're exciting
+And F, you're a feather in my arms
+G, you look good to me
+H, you're so heavenly
+I, you're the one I idolize
+J, we're like Jack and Jill
+K, you're so kissable
+L, is the love light in your eyes
+M, N, O, P
+I could go on all day
+Q, R, S, T
+Alphabetically speaking: "You're OK"
+U, made my life complete
+V, means you're very sweet
+W, X, Y, Z
+It's fun to wander through the alphabet with you to tell you what you mean to me.
+&gt;&gt;&gt;
+&gt;&gt;&gt; Alphas.fun.country('A')
+['Abkhazia', 'Afghanistan', 'Akrotiri and Dhekelia(United Kingdom)', 'Albania', 'Algeria', 'American Samoa(United States)', 'Andorra', 'Angola', 'Anguilla(United Kingdom)', 'Antarctica', 'Antigua and Barbuda', 'Argentina', 'Armenia', 'Aruba(Netherlands)', 'Ashmore and Cartier Islands(Australia)', 'Australia', 'Austria', 'Azerbaijan']
+&gt;&gt;&gt;
+&gt;&gt;&gt; Alphas.fun.country('Z')
+['Zambia', 'Zimbabwe']
+&gt;&gt;&gt;
+</code></pre>
+
+<p>You can suggest more...</p>
+      </section>
+      <footer>
+        <p><small>Hosted on <a href="http://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+		          <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-51512073-2");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
+</html>
