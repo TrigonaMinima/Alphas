@@ -15,6 +15,7 @@ from Alphas import core, crypt, fun, numsys
 
 #### Core functions
 
+##### Listing alphabets
 ```
 >>>
 >>> Alphas.core.alph(0,23)
@@ -29,18 +30,29 @@ from Alphas import core, crypt, fun, numsys
 >>> Alphas.core.ualist(4,20)
 ['E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T']
 >>>
+```
+
+##### Alphabets with dic
+```
 >>> Alphas.core.dic(0,2,6)
 {'f': 0, 'c': 0, 'd': 0, 'e': 0}
 >>>
 >>> Alphas.core.udic(0,2,6)
 {'E': 0, 'D': 0, 'C': 0, 'F': 0}
 >>>
+```
+##### Alphabets in numbers
+```
 >>> Alphas.core.ascii(5,10)
 {'i': 105, 'g': 103, 'h': 104, 'f': 102, 'j': 106}
 >>>
 >>> Alphas.core.uascii(5,10)
 {'I': 73, 'G': 71, 'H': 72, 'F': 70, 'J': 74}
 >>>
+```
+
+##### Vowels and Consonants
+```
 >>> Alphas.core.vowel()
 ['a', 'e', 'i', 'o', 'u']
 >>>
@@ -53,6 +65,10 @@ from Alphas import core, crypt, fun, numsys
 >>> ac.uconsonants()
 ['S', 'X', 'Y', 'C', 'N', 'L', 'K', 'B', 'F', 'W', 'H', 'J', 'M', 'T', 'G', 'P', 'V', 'D', 'Q', 'Z', 'R']
 >>>
+```
+
+##### Alphabets got permuted
+```
 >>> Alphas.core.perm(0,3)
 ['abc', 'acb', 'bac', 'bca', 'cab', 'cba']
 >>>
@@ -68,12 +84,16 @@ from Alphas import core, crypt, fun, numsys
 ```
 
 #### Crypt functions
-
+##### Alphabets in cryptanalysis
 ```
 >>>
 >>> Alphas.crypt.freqal("This module is for fun. It will try to do straight forward things which can be done with the alphabets.")
 {'d': 4, 'i': 8, 'v': 0, 'p': 1, 'u': 2, 'y': 1, 'a': 5, 'b': 2, 'x': 0, 'o': 6, 'j': 0, 'q': 0, 'c': 2, 'e': 5, 'g': 2, 'h': 8, 'k': 0, 'z': 0, 'f': 3, 'n': 4, 'm': 1, 'w': 4, 'r': 5, 's': 5, 't': 10, 'l': 4}
 >>>
+```
+
+##### ROT Alphabets
+```
 >>> Alphas.crypt.rot(13,2,6)
 {'c': 'p', 'd': 'q', 'f': 's', 'e': 'r'}
 >>>
@@ -83,7 +103,7 @@ from Alphas import core, crypt, fun, numsys
 ```
 
 #### NumSys functions
-
+##### Alphabets in 0's and 1's
 ```
 >>>
 >>> Alphas.numsys.binary('b')
@@ -98,6 +118,9 @@ from Alphas import core, crypt, fun, numsys
 >>> Alphas.numsys.ubi(0,4)
 {'C': '1000011', 'A': '1000001', 'D': '1000100', 'B': '1000010'}
 >>>
+```
+##### Alphabets in 8's
+```
 >>> Alphas.numsys.octal('Z')
 '132'
 >>>
@@ -110,6 +133,10 @@ from Alphas import core, crypt, fun, numsys
 >>> Alphas.numsys.uoct(20,26)
 {'Y': '131', 'W': '127', 'U': '125', 'V': '126', 'X': '130', 'Z': '132'}
 >>>
+```
+
+##### Alphabets in 16's (obviously)
+```
 >>> Alphas.numsys.hexadecimal('S')
 '53'
 >>>
