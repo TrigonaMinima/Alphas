@@ -79,7 +79,7 @@ def ascii(start=0, end=26):
     start till end. By default the start is 0 and end is 26.
     """
     asci = {}
-    for i in alph():
+    for i in alph(start, end):
         asci[i] = ord(i)
     return asci
 
@@ -92,7 +92,7 @@ def uascii(start=0, end=26):
     start till end. By default the start is 0 and end is 26.
     """
     asci = {}
-    for i in ualph():
+    for i in ualph(start, end):
         asci[i] = ord(i)
     return asci
 
@@ -121,7 +121,7 @@ def consonants():
 
     Returns all the lowercase consonants.
     """
-    return list(set(alist()) - set(vowel())).sort()
+    return list(set(alist()) - set(vowel()))
 
 
 def uconsonants():
@@ -130,7 +130,7 @@ def uconsonants():
 
     Returns all the uppercase consonants.
     """
-    return list(set(ualist()) - set(uvowel())).sort()
+    return list(set(ualist()) - set(uvowel()))
 
 
 def permu(s):
@@ -145,7 +145,7 @@ def permu(s):
     else:
         for i in range(len(s)):
             c = s[i]
-            for per in permu(s[:i] + s[i+1:]):
+            for per in permu(s[:i] + s[i + 1:]):
                 res += [c + per]
 
     return res
@@ -168,7 +168,7 @@ def uperm(start=0, end=26):
     Returns a list containing all the permutations of the string of alphabets (uppercase) from start to end.
     By default start is 0 and end is 26.
     """
-    return permu(ualph(start,end))
+    return permu(ualph(start, end))
 
 
 def cyclic(start=0, end=26):
@@ -180,8 +180,8 @@ def cyclic(start=0, end=26):
     """
     cycle = []
     a = alph(start, end)
-    for i in range(0,len(a)):
-        cycle.append(a[i:]+a[:i])
+    for i in range(0, len(a)):
+        cycle.append(a[i:] + a[:i])
     return cycle
 
 
@@ -194,12 +194,12 @@ def ucyclic(start=0, end=26):
     """
     cycle = []
     a = ualph(start, end)
-    for i in range(0,len(a)):
-        cycle.append(a[i:]+a[:i])
+    for i in range(0, len(a)):
+        cycle.append(a[i:] + a[:i])
     return cycle
 
 
-#if __name__ == '__main__':
+# if __name__ == '__main__':
 #   print alph()
 #   print ualph()
 #   print alist()
