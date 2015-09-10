@@ -9,14 +9,14 @@ This module is for fun. It will try to do straight forward things which can be d
 
 #### Import
 
-```
+```python
 from Alphas import core, crypt, fun, numsys
 ```
 
 #### Core functions
 
 ##### Listing alphabets
-```
+```python
 >>>
 >>> Alphas.core.alph(0,23)
 'abcdefghijklmnopqrstuvw'
@@ -33,7 +33,7 @@ from Alphas import core, crypt, fun, numsys
 ```
 
 ##### Alphabets with dic
-```
+```python
 >>> Alphas.core.dic(0,2,6)
 {'f': 0, 'c': 0, 'd': 0, 'e': 0}
 >>>
@@ -42,7 +42,7 @@ from Alphas import core, crypt, fun, numsys
 >>>
 ```
 ##### Alphabets in numbers
-```
+```python
 >>> Alphas.core.ascii(5,10)
 {'i': 105, 'g': 103, 'h': 104, 'f': 102, 'j': 106}
 >>>
@@ -52,7 +52,7 @@ from Alphas import core, crypt, fun, numsys
 ```
 
 ##### Vowels and Consonants
-```
+```python
 >>> Alphas.core.vowel()
 ['a', 'e', 'i', 'o', 'u']
 >>>
@@ -68,7 +68,7 @@ from Alphas import core, crypt, fun, numsys
 ```
 
 ##### Alphabets got permuted
-```
+```python
 >>> Alphas.core.perm(0,3)
 ['abc', 'acb', 'bac', 'bca', 'cab', 'cba']
 >>>
@@ -85,7 +85,7 @@ from Alphas import core, crypt, fun, numsys
 
 #### Crypt functions
 ##### Alphabets in cryptanalysis
-```
+```python
 >>>
 >>> Alphas.crypt.freqal("This module is for fun. It will try to do straight forward things which can be done with the alphabets.")
 {'d': 4, 'i': 8, 'v': 0, 'p': 1, 'u': 2, 'y': 1, 'a': 5, 'b': 2, 'x': 0, 'o': 6, 'j': 0, 'q': 0, 'c': 2, 'e': 5, 'g': 2, 'h': 8, 'k': 0, 'z': 0, 'f': 3, 'n': 4, 'm': 1, 'w': 4, 'r': 5, 's': 5, 't': 10, 'l': 4}
@@ -93,7 +93,7 @@ from Alphas import core, crypt, fun, numsys
 ```
 
 ##### ROT Alphabets
-```
+```python
 >>> Alphas.crypt.rot(13,2,6)
 {'c': 'p', 'd': 'q', 'f': 's', 'e': 'r'}
 >>>
@@ -104,7 +104,7 @@ from Alphas import core, crypt, fun, numsys
 
 #### NumSys functions
 ##### Alphabets in 0's and 1's
-```
+```python
 >>>
 >>> Alphas.numsys.binary('b')
 '1100010'
@@ -120,7 +120,7 @@ from Alphas import core, crypt, fun, numsys
 >>>
 ```
 ##### Alphabets in 8's
-```
+```python
 >>> Alphas.numsys.octal('Z')
 '132'
 >>>
@@ -136,7 +136,7 @@ from Alphas import core, crypt, fun, numsys
 ```
 
 ##### Alphabets in 16's (obviously)
-```
+```python
 >>> Alphas.numsys.hexadecimal('S')
 '53'
 >>>
@@ -153,7 +153,7 @@ from Alphas import core, crypt, fun, numsys
 
 #### Fun functions
 
-```
+```python
 >>>
 >>> Alphas.fun.braille(3,5)
 {'d': [[1, 1], [0, 1], [0, 0]], 'e': [[1, 0], [0, 1], [0, 0]]}
